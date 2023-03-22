@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>要素がふわっと出てくるコード</title>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  </head>
+<body>
+
+<style>
+
+
+.fadeIn{
+animation-name:fadeInAnime;
+animation-duration:50s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeInAnime{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* 下から */
+
+.fadeUp{
+animation-name:fadeUpAnime;
+animation-duration:3s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(10000px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* 上から */
+
+.fadeDown{
+animation-name:fadeDownAnime;
+animation-duration:2s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeDownAnime{
+  from {
+    opacity: 0;
+  transform: translateY(-10000px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+/* 左から */
+
+.fadeLeft{
+animation-name:fadeLeftAnime;
+animation-duration:1s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-10000px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+/* 右から */
+
+.fadeRight{
+animation-name:fadeRightAnime;
+animation-duration:4s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeRightAnime{
+  from {
+    opacity: 0;
+  transform: translateX(10000px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  background: #1ebbf0a1;
+}
+
+.flex{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 80px;
+  padding: 20px;
+  margin:0 20px 20px 20px;
+  border-radius: 20px;
+  background: #1ebcf0;
+  color: #fff;
+  justify-content: center;
+  display: inline-flex;
+}
+
+</style>
+
+
+<div class="flex"> 
+  <a href="https://www.google.com" class="box fadeUp">Google</a>
+  <a href="https://www.apple.com" class="box fadeDown">Apple</a>
+  <a href="https://www.facebook.com" class="box fadeLeft">facebook</a>
+  <a href="https://best.aliexpress.com" class="box fadeRight">aliexpress</a>
+</div>
+<div class="flex"> 
+  <a href="https://www.google.com" class="box fadeUp">Google</a>
+  <a href="https://www.apple.com" class="box fadeDown">Apple</a>
+  <a href="https://www.facebook.com" class="box fadeLeft">facebook</a>
+  <a href="https://best.aliexpress.com" class="box fadeRight">aliexpress</a>
+</div>
+<div class="flex"> 
+  <a href="https://www.google.com" class="box fadeUp">Google</a>
+  <a href="https://www.apple.com" class="box fadeDown">Apple</a>
+  <a href="https://www.facebook.com" class="box fadeLeft">facebook</a>
+  <a href="https://best.aliexpress.com" class="box fadeRight">aliexpress</a>
+</div>
+<div class="flex"> 
+  <a href="https://www.google.com" class="box fadeUp">Google</a>
+  <a href="https://www.apple.com" class="box fadeDown">Apple</a>
+  <a href="https://www.facebook.com" class="box fadeLeft">facebook</a>
+  <a href="https://best.aliexpress.com" class="box fadeRight">aliexpress</a>
+</div>
+
+
+<script>
+
+
+
+</script>
+
+</body>
+</html>
