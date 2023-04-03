@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>負荷テスト</title>
+</head>
+<body>
+  <script>
+    // 遅延読み込みを利用して、1秒ごとに5,000の要素を追加する
+    function addElements() {
+      for (var i = 0; i < 5000; i++) {
+        var el = document.createElement('div');
+        document.body.appendChild(el);
+      }
+    }
+
+    setInterval(addElements, 1000); // 1秒ごとにaddElements()関数を呼び出す
+  </script>
+</body>
+</html>
